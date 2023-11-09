@@ -135,8 +135,11 @@ DRAMsim3: a Cycle-accurate, Thermal-Capable DRAM Simulator.
   - ZSim integration: see http://git.ece.umd.edu/shangli/zsim/tree/master for reference.
 
 ## System simulators
-  
-  https://github.com/x-tinkerer/unicorn
+
+- [**QEMU:**](https://www.qemu.org/) is a generic and open source machine emulator and virtualizer.
+
+- [**unicorn:**](https://github.com/x-tinkerer/unicorn)
+  Unicorn CPU emulator framework (ARM, AArch64, M68K, Mips, Sparc, PowerPC, RiscV, S390x, TriCore, X86)
 
 ## Operating Systems
 
