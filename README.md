@@ -5,44 +5,89 @@ Compiling various open-source projects to extract their best features, we aim to
 
 
 ## High-level platform
-* [**Chipyard:**](https://github.com/x-tinkerer/chipyard)
-An Agile RISC-V SoC Design Framework with in-order cores, out-of-order cores, accelerators, and more
-![](https://chipyard.readthedocs.io/en/latest/_images/rocketchip-diagram.png)
 
+* [**Chipyard:**](https://github.com/x-tinkerer/chipyard)
+An Agile RISC-V SoC Design Framework with in-order cores, out-of-order cores, accelerators, and more.
+  ![](https://d3i71xaburhd42.cloudfront.net/cb2652a276d4af84ca19e2a9cac0c51f8eeafe10/4-Figure2-1.png)
+---
+* [**ESP**](https://github.com/x-tinkerer/esp)
+  Embedded Scalable Platforms: Heterogeneous SoC architecture and IP integration made easy.
+  ![](https://www.esp.cs.columbia.edu/images/esp_flow.png)
+--- 
+* [**pulp-platform:**](https://github.com/pulp-platform)
+  ![](https://pulp-platform.org/img/main/pulp_family.png)
+
+---
 * [**OpenTitan:**](https://github.com/x-tinkerer/opentitan)
 OpenTitan: Open source silicon root of trust.
 
   ![](https://opentitan.org/book/doc/getting_started/getting_started_workflow.svg)
 
-
+---
 - [**litex:**](https://github.com/x-tinkerer/litex)
-LiteX is developed and used by Enjoy-Digital since 2012 to co-develop full-systems with our partners and provide an convenient and efficient solutions to create SoCs on FPGA based systems. Here are some of the last project we worked on with our partners
+LiteX is developed and used by Enjoy-Digital since 2012 to co-develop full-systems with our partners and provide an convenient and efficient solutions to create SoCs on FPGA based systems. Here are some of the last project we worked on with our partners.
+![](https://user-images.githubusercontent.com/1450143/103343266-f8cc9a00-4a8b-11eb-9444-f02e1522a490.png)
 
-- [**migen:**](https://github.com/x-tinkerer/migen)A Python toolbox for building complex digital hardware
+---
+- [**migen:**](https://github.com/x-tinkerer/migen)A Python toolbox for building complex digital hardware.
+  ```python
+  from migen import *
+  from migen.build.platforms import m1
+  plat = m1.Platform()
+  led = plat.request("user_led")
+  m = Module()
+  counter = Signal(26)
+  m.comb += led.eq(counter[25])
+  m.sync += counter.eq(counter + 1)
+  plat.build(m)
+  ```
+---
+- [**cocotb:**](https://github.com/x-tinkerer/cocotb)
+cocotb, a coroutine based cosimulation library for writing VHDL and Verilog testbenches in Python.
+![](https://docs.cocotb.org/en/stable/_images/cocotb_overview.svg)
 
 ## Processor cores
 
 - [**riscv-mini:**](https://github.com/x-tinkerer/riscv-mini)
-  Simple RISC-V 3-stage Pipeline in Chisel
+  Simple RISC-V 3-stage Pipeline in Chisel.
   ![](https://github.com/x-tinkerer/riscv-mini/blob/release/diagram.png)
 
+---
+- [**riscv-sodor:**](https://github.com/x-tinkerer/riscv-sodor)
+  Educational microarchitectures for risc-v isa.
+  ![](https://github.com/ucb-bar/riscv-sodor/raw/master/doc/zscale.png)
+
+---
 - [**riscv-boom:**](https://github.com/bytetinkerer/riscv-boom)
   SonicBOOM: The Berkeley Out-of-Order Machine
   ![](https://chipyard.readthedocs.io/en/stable/_images/boom-pipeline-detailed.png)
 
+---
 - [**rocket-chip:**](https://github.com/x-tinkerer/rocket-chip)
   Rocket Chip Generator
+![](https://chipyard.readthedocs.io/en/latest/_images/rocketchip-diagram.png)
 
-- [**Ibex:**]()
+---
+- [**Ibex:**](https://github.com/x-tinkerer/ibex)
 Ibex is a production-quality open source 32-bit RISC-V CPU core written in SystemVerilog. The CPU core is heavily parametrizable and well suited for embedded control applications. Ibex is being extensively verified and has seen multiple tape-outs. Ibex supports the Integer (I) or Embedded (E), Integer Multiplication and Division (M), Compressed (C), and B (Bit Manipulation) extensions.
 ![](https://github.com/lowRISC/ibex/raw/master/doc/03_reference/images/blockdiagram.svg)
 
-- [**testchipip:**](https://github.com/x-tinkerer/testchipip)
+---
+- **snitch:** https://github.com/x-tinkerer/snitch
 
-## Perf model
+- **testchipip:** https://github.com/x-tinkerer/testchipip
 
-https://github.com/x-tinkerer/riscv-perf-model
+## Core simulator and modeling
 
+- **riscv-isa-sim:** https://github.com/riscv-software-src/riscv-isa-sim
+
+---
+- [**Ripes:**](https://github.com/x-tinkerer/Ripes)
+A graphical processor simulator and assembly editor for the RISC-V ISA.
+![](https://github.com/mortbopet/Ripes/raw/master/resources/images/animation.gif?raw=true)
+
+---
+- **Performance Modeling:** https://github.com/x-tinkerer/riscv-perf-model
 
 
 ## System-on-Chip
@@ -60,6 +105,7 @@ The gem5 simulator is a modular platform for computer-system architecture resear
   * **arm-gem5-rsk** :https://github.com/x-tinkerer/arm-gem5-rsk
 Official repository of the Arm Research Starter Kit on System Modeling using gem5
 
+---
 - [**The Simulation Engine - SimEng**](https://github.com/x-tinkerer/SimEng)
   SimEng is a framework for building modern, cycle-accurate processor simulators. Its goals are to be:
 
@@ -73,13 +119,28 @@ Official repository of the Arm Research Starter Kit on System Modeling using gem
 
   * **Modelling_Apple_M1_CPU_Architecture** :https://github.com/x-tinkerer/Modelling_Apple_M1_CPU_Architecture
 
-## System simulators
+---
+- [**DRAMSys**](https://github.com/x-tinkerer/DRAMSys)
+  DRAMSys a SystemC TLM-2.0 based DRAM simulator.
+  ![](https://github.com/tukl-msd/DRAMSys/raw/master/docs/images/traceanalyzer.png)
 
+---
+- [**DRAMsim3**](https://github.com/x-tinkerer/DRAMsim3)
+DRAMsim3: a Cycle-accurate, Thermal-Capable DRAM Simulator.
+
+  - Gem5 integration: works with a forked Gem5 version, see https://github.com/umd-memsys/gem5 at dramsim3 branch for reference.
+
+  - SST integration: see http://git.ece.umd.edu/shangli/sst-elements/tree/dramsim3 for reference. We will try to merge to official SST repo.
+
+  - ZSim integration: see http://git.ece.umd.edu/shangli/zsim/tree/master for reference.
+
+## System simulators
+  
+  https://github.com/x-tinkerer/unicorn
 
 ## Operating Systems
 
 - [**vivado-risc-v:**](https://github.com/bytetinkerer/vivado-risc-v/tree/master)
-
 
 ## Toolchains
 
@@ -143,12 +204,14 @@ Official repository of the Arm Research Starter Kit on System Modeling using gem
 
 
 
-
+---
 [**F4PGA:** ](https://github.com/x-tinkerer/f4pga)FOSS Flow For FPGA
 
 ![](https://f4pga.readthedocs.io/en/latest/_images/parts.svg)
 
 
+
+<br/><br/>
 
 # CHIPS Alliance Project Repositories Table of Contents
 | Project Name               | Description                                                                                                      | Repositories                                                                                                                                                                                                                                                                                                                        |
@@ -167,9 +230,7 @@ Official repository of the Arm Research Starter Kit on System Modeling using gem
 | Intel Compiler for SystemC | Open source SystemC to SystemVerilog translation tool and SingleSource library                                   | - [systemc-compiler](https://github.com/chipsalliance/systemc-compiler)                                                                                                                                                                                                                                                             |
 | Chisel                     | Support the Chisel Hardware Construction Language and related projects                                           | - [chisel](https://github.com/chipsalliance/chisel)                                                                                                                                                                                                                                                                                 |
 
-
-
-
+<br/><br/>
 
 # OpenHW Group Project Repositories Table of Contents 
 
