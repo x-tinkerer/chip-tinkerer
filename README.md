@@ -108,6 +108,7 @@ A graphical processor simulator and assembly editor for the RISC-V ISA.
   Open-source high-performance RISC-V processor
 ![](https://github.com/x-tinkerer/XiangShan/raw/master/images/xs-arch-nanhu.svg)
 
+  - XiangShan Frontend Develop Environment: https://github.com/x-tinkerer/xs-env
 
 ## SoC simulator
 - [**gem5:** ](https://github.com/x-tinkerer/gem5)
@@ -159,8 +160,30 @@ DRAMsim3: a Cycle-accurate, Thermal-Capable DRAM Simulator.
 ## Operating Systems
 
 - [**vivado-risc-v:**](https://github.com/bytetinkerer/vivado-risc-v/tree/master)
+  Xilinx Vivado block designs for FPGA RISC-V SoC running Debian Linux distro。
 
 ## Toolchains
+
+- [**riscv-gnu-toolchain**](https://github.com/x-tinkerer/riscv-gnu-toolchain)
+  GNU toolchain for RISC-V, including GCC.
+  
+  ```
+  --with-binutils-src
+  --with-gcc-src
+  --with-gdb-src
+  --with-glibc-src
+  --with-linux-headers-src
+  --with-llvm-src
+  --with-musl-src
+  --with-newlib-src
+  --with-pk-src
+  --with-qemu-src
+  --with-spike-src
+  ```
+
+   * **riscv-tools-feedstock：** https://github.com/ucb-bar/riscv-tools-feedstock
+   * **esp-tools-feedstock：** https://github.com/ucb-bar/esp-tools-feedstock
+ 
 
 ## Applications
 
