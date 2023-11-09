@@ -7,7 +7,8 @@ Compiling various open-source projects to extract their best features, we aim to
 
 * [**Chipyard:**](https://github.com/x-tinkerer/chipyard)
 An Agile RISC-V SoC Design Framework with in-order cores, out-of-order cores, accelerators, and more.
-  ![](https://d3i71xaburhd42.cloudfront.net/cb2652a276d4af84ca19e2a9cac0c51f8eeafe10/4-Figure2-1.png)
+![](https://d3i71xaburhd42.cloudfront.net/cb2652a276d4af84ca19e2a9cac0c51f8eeafe10/4-Figure2-1.png)
+
 <br/><br/>
 
 * [**ESP**](https://github.com/x-tinkerer/esp)
@@ -221,7 +222,8 @@ DRAMsim3: a Cycle-accurate, Thermal-Capable DRAM Simulator.
 
 
 <br/>
-[**F4PGA:** ](https://github.com/x-tinkerer/f4pga)FOSS Flow For FPGA
+
+[**F4PGA:**](https://github.com/x-tinkerer/f4pga)FOSS Flow For FPGA
 
 ![](https://f4pga.readthedocs.io/en/latest/_images/parts.svg)
 
